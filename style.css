@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    color: #5B058A;
+}
+
+.headernav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #042A2B;
+    color: #F2E9DC;
+}
+
+#pageIcon img {
+    height: 60px;
+}
+
+#pageLinks a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #F2E9DC;
+}
+
+#pageLinks a:hover {
+    color: #9050d0;
+}
