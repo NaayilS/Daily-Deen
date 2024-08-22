@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Deen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Lalezar&family=Merienda:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main_style.css">
 </head>
 <body>
-    
     <nav>
-        <div class="headernav">
+        <div class="headernav" style="font-family: 'Lalezar', cursive;">
             <div id="pageIcon">
                 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ae1f297a-1a6a-48cf-a74c-4959dc10e524/ddly5y9-d3094ce9-5fd3-4a50-b621-3440c4eacd24.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FlMWYyOTdhLTFhNmEtNDhjZi1hNzRjLTQ5NTlkYzEwZTUyNFwvZGRseTV5OS1kMzA5NGNlOS01ZmQzLTRhNTAtYjYyMS0zNDQwYzRlYWNkMjQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.52R1VyYvnRBdFiw9VHlHiBUnMdWkQVq2Q2cJLwfFHiE" alt="Daily Deen Logo"/>
             </div>
@@ -21,74 +21,94 @@
                 <a href="./letter_to_huzoor.html">Letter to Huzoor!</a>
                 <a href="./about_ahmadiyya.html">About Ahmadiyya</a>
                 <a href="./contact_us.html">Contact Us</a>
-                <a href="./login.html" class="login-button">Login</a> 
+                <a href="./login.html" class="login-button">Login</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <section id="daily-verse-section">
-            <div class="verse-container">
-                <h2>Daily Verse</h2>
-                <p id="daily-verse">"Indeed, this Qur'an guides to that which is most suitable..." (Qur'an 17:9)</p>
-                <p id="verse-reference">Surah Al-Isra, Ayah 9</p>
+        <section id="content-section">
+            <section id="daily-verse-section">
+                <div class="verse-container" style="font-family: 'Scheherazade New', serif;">
+                    <h2>Daily Verse</h2>
+                    <p id="verse-text">"Indeed, this Qur'an guides to that which is most suitable..." (Qur'an 17:9)</p>
+                    <p id="verse-reference">Surah Al-Isra, Ayah 9</p>
+                    
+                    <div class="translation-buttons">
+                        <button onclick="showTranslation('urdu')"style="font-family: 'Scheherazade New', serif;">Urdu</button>
+                        <button onclick="showTranslation('arabic')"style="font-family: 'Scheherazade New', serif;">Arabic</button>
+                    </div>
+                    <div id="translation-urdu" class="translation">
+                        <p>"بیشک یہ قرآن اس راستے کی طرف رہنمائی کرتا ہے جو سب سے زیادہ سیدھا ہے..." (قرآن 17:9)</p>
+                    </div>
+                    <div id="translation-arabic" class="translation">
+                        <p>"إِنَّ هَذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ..." (القرآن 17:9)</p>
+                    </div>
+                </div>
+            </section>
+
+            <div id="article-section">
+                <div class="article-container">
+                    <div class="article" id="article1">
+                        <h2>Islamic News Article 1</h2>
+                        <p>Summary of the first Islamic news article goes here...</p>
+                    </div>
+                    <div class="article" id="article2">
+                        <h2>Islamic News Article 2</h2>
+                        <p>Summary of the second Islamic news article goes here...</p>
+                    </div>
+                    <div class="article" id="article3">
+                        <h2>Islamic News Article 3</h2>
+                        <p>Summary of the third Islamic news article goes here...</p>
+                    </div>
+                </div>
             </div>
-            <div class="chanda-info">
-                <h3>Contribute to Chanda</h3>
-                <p>Your contributions are vital to the community and yourself. To make your Chanda payment, please visit the official Ahmadiyya Finance Portal.</p>
-                <a href="https://chanda.ahmadiyya.us/pay" target="_blank" class="chanda-button">Pay Chanda</a>
-            </div>
-        </section>
-        <section id="article-section">
-            <div class="article-container">
-                <div class="article active" id="article1">
-                    <h2>Islamic News Article 1</h2>
-                    <p>Summary of the first Islamic news article goes here...</p>
+
+            <div id="chanda-info-section">
+                <div class="chanda-info" style="font-family: 'Merienda', cursive;">
+                    <h3>Contribute to Chanda</h3>
+                    <p>Your contributions are vital to the community and yourself. To make your Chanda payment, please visit the official Ahmadiyya Finance Portal.</p>
+                    <a href="https://chanda.ahmadiyya.us/pay" target="_blank" class="chanda-button">Pay Chanda</a>
                 </div>
-                <div class="article" id="article2">
-                    <h2>Islamic News Article 2</h2>
-                    <p>Summary of the second Islamic news article goes here...</p>
-                </div>
-                <div class="article" id="article3">
-                    <h2>Islamic News Article 3</h2>
-                    <p>Summary of the third Islamic news article goes here...</p>
-                </div>
-                <!-- Add more articles as needed -->
             </div>
         </section>
 
-        <aside id="sadaqah-sidebar">
+        <aside id="sadaqah-sidebar" style="font-family: 'Merienda', cursive;">
             <h3>Sadaqah: Donate to Humanity First</h3>
             <div class="project">
                 <a href="https://humanityfirst.org/the-middle-east-crisis-appeal/" target="_blank">
-                    <h4>The Palestine Appeal</h4> </a>
-                   <div id="sadaqah-images">
+                    <h4>The Palestine Appeal</h4> 
+                </a>
+                <div id="sadaqah-images">
                     <img src="https://humanityfirst.org/wp-content/uploads/2024/01/Screenshot-2024-01-21-at-09.22.30.png" alt="Palestine Info">
-                   </div>
-                    <p>The conflict between Israel and Gaza has led to immense suffering, with thousands of lives lost, many injured, and millions displaced. Civilians in Gaza face dire conditions, including damaged schools, health facilities, and shortages of essential supplies. Humanity First is actively providing emergency aid, including medication, food, and water, and has been instrumental in offering free medical care to thousands. </p>
+                </div>
+                <p>The conflict between Israel and Gaza has led to immense suffering, with thousands of lives lost, many injured, and millions displaced. Civilians in Gaza face dire conditions, including damaged schools, health facilities, and shortages of essential supplies. Humanity First (HF) is actively providing emergency aid, including medication, food, and water, and has been instrumental in offering free medical care to thousands.</p>
             </div>
+
             <div class="project">
-                <a href="https://humanityfirst.org/masroor-center-for-healthcare/" target="_blank">
-                    <h4>Masroor Center in Yopougon-Gesco</h4></a>
-                    <div id="sadaqah-images">
-                        <img src="https://humanityfirst.org/wp-content/uploads/2024/03/masroor-hc-3.jpg" alt="Masroor Center Image">
-                       </div>
-                    <p>Humanity First has been diligently working on a new hospital in Yopougon-Gesco, near Abidjan, Ivory Coast. This facility will include an Emergency Department, Maternity suites, Neonatal care, an ICU, and Operating Theatres, along with comprehensive diagnostic and support services. With the main structure completed, the team is now focused on the internal fit-out, including infection control flooring and basic infrastructure. Donations are urgently needed to complete the medical gas infrastructure and install medical equipment. Supporting this project will ensure the hospital can provide essential healthcare services to the community.</p>
+                <a href="https://www.humanityfirst.org/latest-project-2" target="_blank">
+                    <h4>Masroor Center in Yopougon-Gesco</h4>
+                </a>
+                <div id="sadaqah-images">
+                    <img src="https://humanityfirst.org/wp-content/uploads/2024/03/masroor-hc-3.jpg" alt="Masroor Photo">
+                </div>
+                <p>Humanity First has been diligently working on a new hospital in Yopougon-Gesco, near Abidjan, Ivory Coast. This facility will include an Emergency Department, Maternity suites, Neonatal care, an ICU, and Operating Theatres, along with comprehensive diagnostic and support services. With the main structure completed, the team is now focused on the internal fit-out, including infection control flooring and basic infrastructure. Donations are urgently needed to complete the medical gas infrastructure and install medical equipment. Supporting this project will ensure the hospital can provide essential healthcare services to the community.</p>
             </div>
+
             <div class="project">
                 <a href="https://www.humanityfirst.org" target="_blank">
-                    <h4>Humanity First</h4></a>
-                    <div id="sadaqah-images">
-                        <img src="https://humanityfirst.org/wp-content/uploads/2020/04/nav-logo.png" alt="Humanity First Logo">
-                       </div>
-                    <p>Donate to any other projects or Humanity First locations across 6 continents on Humanity First's website</p>
+                    <h4>Humanity First</h4>
+                </a>
+                <div id="sadaqah-images">
+                    <img src="https://humanityfirst.org/wp-content/themes/humanity-first/images/humanity-first.png" alt="Humanity First Logo">
+                </div>
+                <p>Donate to any other projects or Humanity First locations across 6 continents on Humanity First's website.</p>
             </div>
         </aside>
     </main>
+
     <footer>
         <p>&copy; 2024 DigitalDeen. All rights reserved.</p>
     </footer>
-    
-    <script src="./script.js"></script>
 </body>
 </html>
