@@ -1,18 +1,21 @@
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F5F5F5;
-    color: #808f85;
+    background: url('https://ahmadiyyauk.org/wp-content/uploads/2017/10/Baitul-fUTUH-compressed.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #5B058A;
 }
 
+/* Header Navigation */
 .headernav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #042A2B;
+    background-color: rgba(4, 42, 43, 0.8); /* Semi-transparent background for readability */
     color: #F2E9DC;
     flex-wrap: wrap;
 }
@@ -25,14 +28,12 @@ body {
 h3 {
     margin: 0;
     font-size: 1.5rem;
-    flex-grow: 1;
     text-align: center;
 }
 
 #pageLinks {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
 }
 
 #pageLinks a {
@@ -46,25 +47,58 @@ h3 {
     color: #9050d0;
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
+/* Login Button */
+.login-button {
+    background-color: #042A2B;
+    color: #F2E9DC;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: auto; /* Pushes the login button to the far right */
 }
 
+.login-button:hover {
+    background-color: #9050d0;
+}
+
+/* Main Content Area */
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Sadaqah Sidebar */
 #sadaqah-sidebar {
-    flex: 1;
-    background-color: #F2E9DC;
+    flex: 0 0 25%;
+    background-color: rgba(242, 233, 220, 0.9);
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-right: 20px;
-    order: -1; /* Move the sidebar to the left side */
+    border-radius: 10px;
 }
 
 #sadaqah-sidebar h3 {
     margin-top: 0;
     color: #042A2B;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project a {
+    text-decoration: none;
+    color: #5B058A;
+}
+
+.project a:hover {
+    text-decoration: underline;
 }
 
 #sadaqah-images img {
@@ -73,59 +107,163 @@ main {
     display: block;
     margin-bottom: 10px;
 }
-.project {
+
+/* Daily Verse Section */
+#daily-verse-section {
+    flex: 1;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.verse-container {
+    text-align: center;
+}
+
+.verse-container h2 {
+    color: #042A2B;
+    font-size: 2rem;
+}
+
+.verse-container p {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+#verse-reference {
+    color: #5B058A;
+    font-style: italic;
+}
+
+.chanda-info {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.chanda-info h3 {
+    color: #042A2B;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.chanda-info p {
+    font-size: 1rem;
     margin-bottom: 20px;
+    color: #5B058A;
 }
 
-.project a {
+.chanda-button {
+    display: inline-block; /* Ensure the button respects padding and margin */
+    background-color: #042A2B;
+    color: #F2E9DC;
+    padding: 10px 20px;
     text-decoration: none;
-    color: #042a2b;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Add some space between the text and button */
 }
 
-.project a:hover {
+.chanda-button:hover {
+    background-color: #9050d0;
+}
+
+
+/* Login and Create Account Forms */
+.login-container,
+.create-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.login-container h2,
+.create-container h2 {
+    text-align: center;
+    color: #042A2B;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    color: #5B058A;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #042A2B;
+    color: #F2E9DC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #9050d0;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    color: #5B058A;
+}
+
+p a {
+    color: #042A2B;
+    text-decoration: none;
+}
+
+p a:hover {
     text-decoration: underline;
 }
 
-#article-section {
-    flex: 2;
-    margin-left: 20px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.article-container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background-color: #ffffff;
-}
-
-.article {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    display: none;
-    background-color: #fff;
-}
-
-.article.active {
-    display: block;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
     main {
         flex-direction: column;
     }
 
-    #article-section {
+    #daily-verse-section {
         margin-left: 0;
+        margin-top: 20px;
     }
 
     #sadaqah-sidebar {
-        margin-right: 0;
-        margin-top: 20px;
+        margin-bottom: 20px;
     }
+}
+
+footer {
+    background-color: #042A2B;
+    color: #F2E9DC;
+    text-align: center;
+    padding: 15px 0;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
 }
