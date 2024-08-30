@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background: url('https://ahmadiyyauk.org/wp-content/uploads/2017/10/Baitul-fUTUH-compressed.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #042a2b;
+}
+
+/* Header Styles */
+.headernav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(4, 42, 43, 0.8); /* Semi-transparent background */
+    color: #F2E9DC;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#pageIcon img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Container Styles */
+.login-container,
+.create-container {
+    background-color: rgba(242, 233, 220, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Group Styles */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    border-color: #9050d0;
+    outline: none;
+}
+
+/* Button Styles */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #042A2B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #9050d0;
+}
+
+/* Message and Link Styles */
+.message {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.message a {
+    color: #9050d0;
+    text-decoration: none;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}
