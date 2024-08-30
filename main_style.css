@@ -6,34 +6,38 @@ body {
     box-sizing: border-box;
     background: url('https://ahmadiyyauk.org/wp-content/uploads/2017/10/Baitul-fUTUH-compressed.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #5B058A;
+    color: #042a2b;
 }
 
 /* Header Navigation */
 .headernav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 10px;
     background-color: rgba(4, 42, 43, 0.8); /* Semi-transparent background for readability */
     color: #F2E9DC;
+    justify-content: space-between; /* Distribute space between elements */
     flex-wrap: wrap;
 }
 
 #pageIcon img {
-    height: 50px;
-    max-width: 100%;
+    height: 70px;
+    max-width: 400%;
+    margin-right: 10px; /* Adds a small margin between the image and the text */
 }
 
 h3 {
     margin: 0;
     font-size: 1.5rem;
     text-align: center;
+    flex: 0 1 auto; /* Shrinks the title to fit close to the image */
 }
 
 #pageLinks {
     display: flex;
     align-items: center;
+    justify-content: space-evenly; /* Evenly space out the links */
+    flex: 1; /* Allow the links to take up the remaining space */
 }
 
 #pageLinks a {
@@ -47,6 +51,35 @@ h3 {
     color: #9050d0;
 }
 
+/* Login Button */
+.login-button {
+    background-color: #042A2B;
+    color: #F2E9DC;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 20px; /* Add some space between the last link and the login button */
+}
+
+.login-button:hover {
+    background-color: #9050d0;
+}
+
+/* Login Button */
+.login-button {
+    background-color: #042A2B;
+    color: #F2E9DC;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 20px; /* Add some space between the last link and the login button */
+}
+
+.login-button:hover {
+    background-color: #9050d0;
+}
 /* Login Button */
 .login-button {
     background-color: #042A2B;
@@ -76,7 +109,7 @@ main {
 }
 
 #daily-verse-section, 
-#article-section, 
+#carousel-section, 
 #chanda-info-section {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
@@ -118,22 +151,89 @@ main {
     display: block;
 }
 
-
-.article-container .article {
-    margin-bottom: 20px;
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    width: 100%; /* Set to 100% to allow it to adapt to smaller screens */
+    max-width: 1200px; /* Limit the maximum width for larger screens */
+    height: auto;  /* Allow the height to adjust automatically */
+    margin: 0 auto; /* Center the carousel horizontally */
+    overflow: hidden;
+    border-radius: 10px; /* Add rounded corners for a smoother look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for a more distinct appearance */
 }
 
-.article h2 {
-    color: #042A2B;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition for slide animation */
+    width: 100%; /* Ensure the inner container spans across all slides */
 }
 
-.article p {
-    font-size: 1rem;
-    color: #5B058A;
+.carousel-item {
+    flex: 1 0 100%; /* Each item takes up 100% of the carousel width */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.carousel-item img {
+    width: 100%; /* Image covers the entire width of its container */
+    height: auto; /* Allow the height to adjust based on the width */
+    object-fit: cover; /* Ensure image scales properly without distortion */
+    border-radius: 10px; /* Ensure image corners match the carousel corners */
+}
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for buttons */
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 20; /* Ensure buttons are above other elements */
+}
+
+.carousel-control-prev {
+    left: 10px; /* Position the previous arrow on the left */
+}
+
+.carousel-control-next {
+    right: 10px; /* Position the next arrow on the right */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken the button background on hover */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    background-size: 100%, 100%; /* Ensure the icons fit within the button */
+}
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    right: 10%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency for readability */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Center the caption text */
+    max-width: 80%; /* Limit the width of the caption */
+    margin: 0 auto; /* Center the caption within the carousel */
+    z-index: 10; /* Ensure caption is above the image */
+}
+
+.carousel-caption h3 {
+    font-size: 1.5rem; /* Adjust the font size for the title */
+    margin-bottom: 25px;
+}  
 .chanda-info h3 {
     color: #042A2B;
     font-size: 1.5rem;
@@ -143,7 +243,7 @@ main {
 .chanda-info p {
     font-size: 1rem;
     margin-bottom: 20px;
-    color: #5B058A;
+    color: #042a2b;
 }
 
 .chanda-button {
@@ -160,14 +260,73 @@ main {
     background-color: #9050d0;
 }
 
+#prayer-times-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Merienda', cursive;
+}
+
+#prayer-times-section h3 {
+    color: #042A2B;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#weekly-prayer-times {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.day-container {
+    width: 30%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.day-container h4 {
+    margin-bottom: 5px;
+    color: #042A2B;
+}
+
+.day-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.day-container li {
+    font-size: 0.9rem;
+    color: #042a2b;
+    margin-bottom: 5px;
+}
+
+#location-permission-note {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #8B0000; /* Dark red color to grab attention */
+    text-align: center;
+    font-family: 'Merienda', cursive;
+}
+
 /* Sadaqah Sidebar */
 #sadaqah-sidebar {
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: space-between; /* Space out the content */
     width: 300px;
     background-color: rgba(242, 233, 220, 0.9);
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    height: 100%; /* Ensure sidebar takes full height */
 }
+
 
 #sadaqah-sidebar h3 {
     margin-top: 0;
@@ -182,12 +341,30 @@ main {
 
 .project a {
     text-decoration: none;
-    color: #5B058A;
+    color: #373f47;
     font-weight: bold;
 }
 
 .project a:hover {
     text-decoration: underline;
+}
+
+#daily-challenge {
+    margin-top: auto; /* Pushes the daily challenge to the bottom */
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #042A2B; /* Optional: Add a separator */
+}
+
+#daily-challenge-selection {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+#countdown-timer {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #2A0B3B;
 }
 
 #sadaqah-images img {
@@ -221,4 +398,19 @@ footer {
     #sadaqah-sidebar {
         margin-top: 20px;
     }
+    .carousel {
+        height: auto; /* Allow the carousel to adapt height based on content */
+    }
+
+    .carousel-item img {
+        object-fit: contain; /* Adjust object-fit to 'contain' for smaller screens */
+        border-radius: 0; /* Remove border-radius on small screens if needed */
+    }
+
+    .carousel-caption h3 {
+        font-size: 1rem; /* Adjust caption font size for smaller screens */
+    }
 }
+
+
+
