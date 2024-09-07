@@ -45,6 +45,29 @@ h3 {
 #pageLinks a:hover {
     color: #9050d0;
 }
+/* Quran Verse Section */
+.verse-section {
+    text-align: center;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.verse-section blockquote {
+    font-family: 'Scheherazade New', serif;
+    font-size: 1.25rem;
+    color: #042a2b;
+}
+
+.verse-section cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #666;
+}
 
 /* Prayer Request Form and Post Section */
 #prayer-request-section {
