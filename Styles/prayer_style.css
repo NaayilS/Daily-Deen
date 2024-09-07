@@ -57,9 +57,11 @@ h3 {
 }
 
 .verse-section blockquote {
-    font-family: 'Scheherazade New', serif;
+    font-family: 'Merienda', cursive;
     font-size: 1.25rem;
     color: #042a2b;
+    margin: 0;
+    padding: 0;
 }
 
 .verse-section cite {
@@ -67,8 +69,30 @@ h3 {
     margin-top: 10px;
     font-size: 1rem;
     color: #666;
+    font-family: 'Merienda', cursive;
 }
 
+/* Translation Buttons */
+.translation-buttons {
+    margin-top: 20px;
+}
+
+.translation-buttons button {
+    background-color: #042A2B;
+    color: #F2E9DC;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: 'Merienda', cursive;
+}
+
+.translation-buttons button:hover {
+    background-color: #9050d0;
+}
 /* Prayer Request Form and Post Section */
 #prayer-request-section {
     display: flex;
